@@ -1,0 +1,108 @@
+@import "../variables.scss";
+.app {
+  height: 100vh;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 5vh 1fr 5vh;
+  grid-template-rows: auto 1fr;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1rem;
+    grid-template-columns: 3vh 1fr 3vh;
+  }
+}
+
+//ContentBox.jsx
+.contentbox {
+  grid-column: 2 / -2;
+  display: grid;
+}
+
+//MainPage.jsx
+.grid {
+  padding: 2rem;
+  max-width: 100%;
+  height: auto;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1rem;
+    grid-gap: 1rem;
+  }
+}
+
+.container {
+  background-color: var(--color-grey-dark-1);
+  box-shadow: 4px 5px 5px rgba(#000, 0.3);
+  margin-top: 3vh;
+  grid-row: 1;
+  grid-column: 2/ -2;
+  border-radius: 20px;
+  height: 82vh;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+//MyCards.jsx
+.container__mycards {
+  // background-color: var(--color-primary-light);
+  border: 0.5rem solid var(--color-primary-light);
+  // box-shadow: 4px 5px 5px rgba(#000, 0.3);
+  box-shadow: 0px 0px 7px 6px rgba(#e74e49, 0.3);
+  margin-top: 3vh;
+  grid-row: 1;
+  grid-column: 2/ -2;
+  border-radius: 20px;
+  height: 82vh;
+  overflow: scroll;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+//Spinner
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  //i did not create this spinner myself, its from a tutorial i have done
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 6.4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+        farthest-side,
+        var(--color-primary-dark) 94%,
+        #0000
+      )
+      top/10px 10px no-repeat,
+    conic-gradient(#0000 30%, var(--color-primary-light));
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0);
+  animation: spin 1s infinite linear;
+  transform: translate(-50%, -50%);
+  margin-left: -3.2rem;
+  margin-top: -3.2rem;
+}
+
+.skeleton {
+  width: 100%;
+  height: auto;
+  background-color: var(--color-grey-light-2);
+  border-radius: 10px;
+  justify-self: center;
+}

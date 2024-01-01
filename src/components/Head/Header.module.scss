@@ -1,0 +1,53 @@
+@import "../../variables.scss";
+
+@font-face {
+  font-family: PokeFont;
+  src: url(../../assets/PokeFont.ttf);
+}
+
+.header {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: space-between;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 0 1rem;
+    }
+
+    &_image {
+      max-width: 6.5rem;
+      width: 100%;
+      margin-right: 2rem;
+    }
+
+    &_name {
+      font-family: PokeFont;
+      font-size: 4.8rem;
+      color: var(--color-grey-dark-2);
+      text-decoration: none;
+
+      @media only screen and (max-width: $bp-large) {
+        font-size: 4.3rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 4rem;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        font-size: 3.8rem;
+      }
+    }
+  }
+}
+
+.red {
+  color: var(--color-primary-light);
+}
