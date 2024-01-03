@@ -35,8 +35,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<AppLayout />}>
-            <Route path="main" element={<MainPage />} />
-            <Route index element={<Navigate replace to="main" />} />
+            <Route path="/main" element={<MainPage />} />
+            <Route index element={<Navigate replace to="/main" />} />
             <Route
               path="card/:id"
               element={

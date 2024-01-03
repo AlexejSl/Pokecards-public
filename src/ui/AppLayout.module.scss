@@ -10,6 +10,11 @@
     padding: 1rem;
     grid-template-columns: 3vh 1fr 3vh;
   }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 1rem;
+    grid-template-columns: 0vh 1fr 0vh;
+  }
 }
 
 //ContentBox.jsx
@@ -25,11 +30,17 @@
   height: auto;
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(38rem, 1fr));
 
   @media only screen and (max-width: $bp-medium) {
     padding: 1rem;
     grid-gap: 1rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(36rem, 1fr));
+    flex-direction: column;
   }
 }
 
@@ -42,9 +53,16 @@
   border-radius: 20px;
   height: 82vh;
   overflow: scroll;
+  touch-action: pan-y;
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    height: fit-content;
+    overflow: hidden;
+    margin-top: 1vh;
   }
 }
 
@@ -64,6 +82,12 @@
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    overflow: hidden;
+    height: auto;
+    margin-top: 1vh;
   }
 }
 

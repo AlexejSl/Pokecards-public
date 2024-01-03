@@ -20,6 +20,7 @@
 
   &__margin_adjusted_by_auth_status {
     margin-right: 20rem;
+
     @media only screen and (max-width: $bp-small) {
       margin-right: 0;
     }
@@ -58,6 +59,10 @@
 
     &:hover {
       transform: translateY(-2px);
+
+      @media only screen and (max-width: $bp-medium) {
+        transform: translateY(0px);
+      }
     }
   }
 }

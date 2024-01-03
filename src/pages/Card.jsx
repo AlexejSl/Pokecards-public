@@ -9,7 +9,6 @@ import CardError from "../ui/CardError";
 function Card({ user = "", isLoading }) {
   const { id } = useParams();
   const [card, setCard] = useState(null);
-  // const [cardAlreadyAdded, setCardAlreadyAdded] = useState(false);
   const [cardError, setCardError] = useState(false);
 
   // this unique card id ensures that user cant add multiple same cards to myCards, it cant be simply id because it wouldnt allow 2 users to have the same card added to My Cards
@@ -80,9 +79,13 @@ function Card({ user = "", isLoading }) {
       <h2 className={styles.card__name}>
         {card.data.name} #{card.data.number}
       </h2>
-      <p>Rarity: {card.data.rarity || "No data"}</p>
-      <p>Set: {card.data.set.name}</p>
-      <p>Release date: {card.data?.set?.releaseDate || "No data"}</p>
+      <p className={styles.card__rarity}>
+        Rarity: {card.data.rarity || "No data"}
+      </p>
+      <p className={styles.card__set}>Set: {card.data.set.name}</p>
+      <p className={styles.card__release}>
+        Release date: {card.data?.set?.releaseDate || "No data"}
+      </p>
       <a href={card.data?.cardmarket?.url || ""} className={styles.card__link}>
         Check the card on Cardmarket
       </a>
@@ -91,14 +94,13 @@ function Card({ user = "", isLoading }) {
       </a>
       <h3 className={styles.card__prices}>Prices</h3>
       <p className={styles.card__price}>
-        1 day average price: {card.data?.cardmarket?.prices?.avg1 || "No data"}$
+        1 day average: {card.data?.cardmarket?.prices?.avg1 || "No data"}$
       </p>
       <p className={styles.card__price}>
-        7 day average price: {card.data?.cardmarket?.prices?.avg7 || "No data"}$
+        7 day average: {card.data?.cardmarket?.prices?.avg7 || "No data"}$
       </p>
       <p className={styles.card__price}>
-        30 day average price:{" "}
-        {card.data?.cardmarket?.prices?.avg30 || "No data"}$
+        30 day average: {card.data?.cardmarket?.prices?.avg30 || "No data"}$
       </p>
       <p className={styles.card__main_price}>
         Price:{" "}

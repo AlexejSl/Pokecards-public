@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .card {
   width: 100%;
   height: auto;
@@ -27,6 +29,10 @@
 
   &__img {
     max-width: 18rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      max-width: 16rem;
+    }
   }
 
   &__box {

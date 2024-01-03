@@ -6,7 +6,7 @@ import { containsNumber } from "../../helpers/containsNum";
 import { useNavigate } from "react-router-dom";
 
 function SearchBar({ windowWidth }) {
-  const { updateSearchResults, isLoading, isLoadingCheck } = useSearch();
+  const { updateSearchResults, isLoadingCheck } = useSearch();
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
 
@@ -50,7 +50,7 @@ function SearchBar({ windowWidth }) {
     >
       <input
         type="text"
-        placeholder="Search a pokemon card"
+        placeholder={windowWidth < 550 ? "Search" : "Search a pokemon card"}
         className={styles.searchbar__input}
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}

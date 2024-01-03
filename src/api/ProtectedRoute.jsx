@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 function ProtectedRoute({ children }) {
   const navigate = useNavigate();
   const { isLoading, isAuthenticated, user } = useUser();
-  console.log(isAuthenticated);
 
   useEffect(
     function () {

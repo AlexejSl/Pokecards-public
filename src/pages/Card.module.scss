@@ -1,7 +1,10 @@
+@import "../variables.scss";
+
 .card {
   padding: 4rem;
   margin-top: 6vh;
   display: grid;
+  grid-auto-flow: dense;
   grid-template-columns: min-content min-content;
   grid-template-rows: repeat(12, minmax(min-content, auto));
   grid-row-gap: 2rem;
@@ -16,6 +19,16 @@
   font-weight: 500;
   color: var(--color-grey-dark-2);
   white-space: nowrap;
+  max-width: 94vw;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 2rem;
+    grid-column-gap: 2rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-template-rows: repeat(8, minmax(min-content, auto));
+  }
 
   &__image {
     max-width: 30rem;
@@ -23,7 +36,18 @@
     grid-row: 2 / -2;
     border: 1rem solid var(--color-grey-dark-1);
     box-shadow: 4px 5px 5px rgba(#000, 0.3);
-    border-radius: 25px;
+    border-radius: 15px;
+
+    @media only screen and (max-width: $bp-small) {
+      max-width: 25rem;
+      border-radius: 15px;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      justify-self: center;
+    }
   }
 
   &__name {
@@ -59,6 +83,20 @@
   &__link {
     text-decoration: none;
     color: var(--color-blue-light);
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-column: 1;
+      justify-self: center;
+    }
+  }
+
+  &__set,
+  &__rarity,
+  &__release {
+    @media only screen and (max-width: $bp-smallest) {
+      grid-column: 1;
+      justify-self: center;
+    }
   }
 
   &__prices {
@@ -66,10 +104,20 @@
     border-top: 2px solid var(--color-primary-dark);
     padding: 1rem 9rem 0rem 8rem;
     font-size: 2rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-column: 2;
+      border-top: none;
+      padding: 0;
+    }
   }
 
   &__price {
     justify-self: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-column: 2;
+    }
   }
 
   &__main_price {
@@ -77,6 +125,10 @@
     font-weight: 600;
 
     font-size: 2rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-column: 2;
+    }
   }
 }
 

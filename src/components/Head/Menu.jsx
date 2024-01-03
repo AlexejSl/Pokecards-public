@@ -2,7 +2,8 @@ import { NavLink } from "react-router-dom";
 import styles from "./Menu.module.scss";
 import { useLogout, useUser } from "../../api/ApiHooks";
 import { PiCardsBold } from "react-icons/pi";
-import { MdManageAccounts, MdLogout } from "react-icons/md";
+import { MdManageAccounts } from "react-icons/md";
+import { TbLogout } from "react-icons/tb";
 
 function Menu({ windowWidth, isAuthenticated }) {
   const { logout } = useLogout();
@@ -38,7 +39,7 @@ function Menu({ windowWidth, isAuthenticated }) {
       <li>
         <button className={styles.nav__item_log} onClick={logout} to="/login">
           {windowWidth < 750 ? (
-            <MdLogout
+            <TbLogout
               className={`${styles.nav__item_icon} ${styles.color_white}`}
             />
           ) : (

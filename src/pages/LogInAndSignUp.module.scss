@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .container {
   display: flex;
   flex-direction: column;
@@ -8,6 +10,10 @@
   left: 50%;
   align-items: center;
   transform: translate(-50%, -50%);
+
+  @media only screen and (max-width: $bp-smallest) {
+    max-width: 96vw;
+  }
 }
 
 .pokecards_text {
@@ -29,6 +35,11 @@
   width: 45rem;
   border-radius: 15px;
   box-shadow: 4px 5px 5px rgba(#000, 0.3);
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 1.5rem;
+    width: 40rem;
+  }
 
   &__header {
     font-size: 3.5rem;
@@ -92,6 +103,10 @@
 
   translate: -50%;
   transition: all 0.2s;
+
+  @media only screen and (max-width: $bp-smallest) {
+    margin-top: 0;
+  }
 
   &:hover {
     transform: translateY(-3px);
