@@ -53,7 +53,7 @@
   border-radius: 20px;
   height: 82vh;
   overflow: scroll;
-  touch-action: pan-y;
+  // touch-action: pan-y;
 
   &::-webkit-scrollbar {
     display: none;

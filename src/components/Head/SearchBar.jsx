@@ -60,7 +60,7 @@ function SearchBar({ windowWidth }) {
         className={styles.searchbar__button}
         disabled={!searchQuery}
       >
-        <BiSearch />
+        <BiSearch className={styles.searchbar__button_icon} />
       </button>
     </form>
   );

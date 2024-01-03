@@ -1,8 +1,7 @@
 @import "../variables.scss";
 
 .card {
-  padding: 4rem;
-  margin-top: 6vh;
+  margin-top: 1vh;
   display: grid;
   grid-auto-flow: dense;
   grid-template-columns: min-content min-content;
@@ -13,37 +12,42 @@
   border: 0.5rem solid var(--color-primary-light);
   align-self: center;
   justify-self: center;
+  justify-content: center;
   align-items: center;
   border-radius: 20px;
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--color-grey-dark-2);
   white-space: nowrap;
-  max-width: 94vw;
+  max-width: 90vw;
+  padding: 1.5rem;
 
   @media only screen and (max-width: $bp-small) {
-    padding: 2rem;
     grid-column-gap: 2rem;
   }
 
   @media only screen and (max-width: $bp-smallest) {
-    grid-template-rows: repeat(8, minmax(min-content, auto));
+    grid-row-gap: 1rem;
+    width: 100%;
+    margin-top: 3rem;
+    align-self: self-start;
   }
 
   &__image {
     max-width: 30rem;
+
     grid-column: 1 / 2;
     grid-row: 2 / -2;
     border: 1rem solid var(--color-grey-dark-1);
     box-shadow: 4px 5px 5px rgba(#000, 0.3);
     border-radius: 15px;
 
-    @media only screen and (max-width: $bp-small) {
-      max-width: 25rem;
-      border-radius: 15px;
+    @media only screen and (max-width: $bp-large) {
+      max-width: 27rem;
     }
 
     @media only screen and (max-width: $bp-smallest) {
+      max-width: 20rem;
       grid-column: 1 / -1;
       grid-row: 2;
       justify-self: center;
@@ -85,7 +89,8 @@
     color: var(--color-blue-light);
 
     @media only screen and (max-width: $bp-smallest) {
-      grid-column: 1;
+      font-size: 1.8rem;
+      grid-column: 1 / -1;
       justify-self: center;
     }
   }
@@ -94,8 +99,9 @@
   &__rarity,
   &__release {
     @media only screen and (max-width: $bp-smallest) {
-      grid-column: 1;
+      grid-column: 1 / -1;
       justify-self: center;
+      font-size: 1.8rem;
     }
   }
 
@@ -106,9 +112,7 @@
     font-size: 2rem;
 
     @media only screen and (max-width: $bp-smallest) {
-      grid-column: 2;
-      border-top: none;
-      padding: 0;
+      grid-column: 1/-1;
     }
   }
 
@@ -116,7 +120,8 @@
     justify-self: center;
 
     @media only screen and (max-width: $bp-smallest) {
-      grid-column: 2;
+      grid-column: 1/-1;
+      font-size: 1.8rem;
     }
   }
 
@@ -127,7 +132,7 @@
     font-size: 2rem;
 
     @media only screen and (max-width: $bp-smallest) {
-      grid-column: 2;
+      grid-column: 1/-1;
     }
   }
 }

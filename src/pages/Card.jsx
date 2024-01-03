@@ -87,10 +87,10 @@ function Card({ user = "", isLoading }) {
         Release date: {card.data?.set?.releaseDate || "No data"}
       </p>
       <a href={card.data?.cardmarket?.url || ""} className={styles.card__link}>
-        Check the card on Cardmarket
+        {card.data.name} on Cardmarket
       </a>
       <a href={card.data?.tcgplayer?.url || ""} className={styles.card__link}>
-        Check the card on TCGplayer
+        {card.data.name} on TCGplayer
       </a>
       <h3 className={styles.card__prices}>Prices</h3>
       <p className={styles.card__price}>
