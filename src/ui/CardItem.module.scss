@@ -114,10 +114,13 @@
   font-size: 2rem;
   border: 2px solid var(--color-primary-dark);
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.2s;
 
   &__emote {
-    margin-top: 0.6rem;
+    margin-bottom: 0.1rem;
     font-weight: 500;
   }
 

@@ -33,6 +33,8 @@
 
   @media only screen and (max-width: $bp-smallest) {
     justify-content: space-around;
+    padding: 0;
+    margin-left: 1rem;
   }
 
   &__item {
@@ -99,16 +101,14 @@
     &_icon {
       font-size: 3rem;
       color: var(--color-grey-dark-2);
-      transform: translateX(5%);
-
       @media only screen and (max-width: $bp-small) {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
       }
     }
 
     &:hover {
       background-color: var(--color-grey-light-2, 0.05);
-      border-radius: 10px;
+      border-radius: 5px;
       transform: translateY(-3px);
       box-shadow: 0 4px 4px rgba(#000000, 0.3);
     }
