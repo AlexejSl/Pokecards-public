@@ -1,6 +1,7 @@
-import styles from "../pages/PageNotFound.module.scss";
-import CardErrImg from "../assets/CardErrImg.png";
+import CardErrImg from "../../assets/CardErrImg.png";
+import styles from "./PageNotFound.module.scss";
 
+//this page got almost the same styles as PageNotFound so i decided not to duplicate the CSS but use pageNotFound css
 function SearchError() {
   return (
     <div className={styles.pagenotfound__container}>

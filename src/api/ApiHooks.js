@@ -52,6 +52,7 @@ export function useSignup() {
     onSuccess: (user) => {
       toast.success("Account successfully created!");
     },
+    onError: (err) => toast.error(err.message),
   });
 
   return { signup, isLoading };
@@ -67,6 +68,7 @@ export function useLogout() {
       queryClient.removeQueries();
       navigate("/login", { replace: true });
     },
+    onError: (err) => toast.error(err.message),
   });
 
   return { logout, isLoading };

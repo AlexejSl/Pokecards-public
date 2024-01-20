@@ -1,0 +1,16 @@
+.btnBack {
+  font-size: 1.8rem;
+  color: var(--color-primary-dark);
+  padding: 1rem;
+  margin-top: 2rem;
+  text-decoration: none;
+  border-bottom: 0.2rem solid var(--color-primary-light);
+  transition: all 0.2s;
+
+  &:hover,
+  &:active {
+    background-color: var(--color-grey-light-1, 0.05);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 4px rgba(#000000, 0.3);
+  }
+}

@@ -1,8 +1,8 @@
 import BackToMainButton from "./BackToMainButton";
-import styles from "../pages/PageNotFound.module.scss";
-import CardErrImg from "../assets/CardErrImg.png";
+import styles from "./PageNotFound.module.scss";
+import CardErrImg from "../../assets/CardErrImg.png";
 
-//this page got almost the same styles as PageNotFound so i decided not to duplicate the code but use that instead
+//this page got almost the same styles as PageNotFound so i decided not to duplicate the CSS but use pageNotFound css
 function CardError() {
   return (
     <div className={styles.pagenotfound__container}>

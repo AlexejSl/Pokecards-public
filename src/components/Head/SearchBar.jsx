@@ -1,9 +1,9 @@
-import { BiSearch } from "../../../node_modules/react-icons/bi";
-import styles from "./SearchBar.module.scss";
-import { useSearch } from "../Context/SearchContext";
 import { useState } from "react";
-import { containsNumber } from "../../helpers/containsNum";
 import { useNavigate } from "react-router-dom";
+import { BiSearch } from "react-icons/bi";
+import { useSearch } from "../../../store/SearchContext";
+import { containsNumber } from "../../helpers/containsNum";
+import styles from "./SearchBar.module.scss";
 
 function SearchBar({ windowWidth }) {
   const { updateSearchResults, isLoadingCheck } = useSearch();

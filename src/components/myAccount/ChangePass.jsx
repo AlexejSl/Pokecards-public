@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
-import styles from "../pages/User.module.scss";
-import { useUpdatePassword } from "../api/ApiHooks";
+import { useUpdatePassword } from "../../api/ApiHooks";
+import styles from "./ChangePass.module.scss";
 
 function ChangePass() {
   const { register, handleSubmit, formState, getValues, reset } = useForm();

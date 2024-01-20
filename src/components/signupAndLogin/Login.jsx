@@ -1,9 +1,10 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import styles from "../pages/LogInAndSignUp.module.scss";
-import BackToMainButton from "../ui/BackToMainButton";
 import { useEffect, useState } from "react";
-import { useLogin, useUser } from "../api/ApiHooks";
-import Spinner from "../ui/Spinner";
+import { useLogin, useUser } from "../../api/ApiHooks";
+
+import Spinner from "../other_LoadErrBtns/Spinner";
+import BackToMainButton from "../Other_LoadErrBtns/BackToMainButton";
+import styles from "./LogInAndSignUp.module.scss";
 
 function Login() {
   const [email, setEmail] = useState("");

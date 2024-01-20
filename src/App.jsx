@@ -1,16 +1,18 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AppLayout from "./ui/AppLayout";
-import MainPage from "./pages/MainPage";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import User from "./pages/User";
-import MyCards from "./pages/MyCards";
-import { Navigate } from "react-router-dom";
-import PageNotFound from "./pages/PageNotFound";
-import Card from "./pages/Card";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
+import { Navigate } from "react-router-dom";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+import AppLayout from "./components/main/AppLayout";
+import MainPage from "./components/main/MainPage";
+import Login from "./components/signupAndLogin/Login";
+import Signup from "./components/signupAndLogin/Signup";
+import User from "./components/myAccount/User";
+import MyCards from "./components/myCards/MyCards";
+import PageNotFound from "./components/other_LoadErrBtns/PageNotFound";
+import Card from "./components/cardPage/Card";
+
 import ProtectedRoute from "./api/ProtectedRoute";
 import ProvideUserInfo from "./api/ProvideUserInfo";
 

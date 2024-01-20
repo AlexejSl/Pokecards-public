@@ -1,0 +1,42 @@
+@import "../../variables.scss";
+
+.container__mycards {
+  border: 0.5rem solid var(--color-primary-light);
+  box-shadow: 0px 0px 7px 6px rgba(#e74e49, 0.3);
+  grid-row: 1;
+  grid-column: 2/ -2;
+  border-radius: 20px;
+  height: 82vh;
+  overflow: scroll;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    overflow: hidden;
+    height: auto;
+    margin-top: 1vh;
+  }
+}
+
+.grid {
+  padding: 2rem;
+  max-width: 100%;
+  height: auto;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(38rem, 1fr));
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1rem;
+    grid-gap: 1rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(36rem, 1fr));
+    flex-direction: column;
+  }
+}

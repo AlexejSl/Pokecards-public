@@ -1,0 +1,19 @@
+@import "../../variables.scss";
+
+.app {
+  height: 100vh;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 5vh 1fr 5vh;
+  grid-template-rows: auto 1fr;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1rem;
+    grid-template-columns: 3vh 1fr 3vh;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 1rem;
+    grid-template-columns: 0vh 1fr 0vh;
+  }
+}

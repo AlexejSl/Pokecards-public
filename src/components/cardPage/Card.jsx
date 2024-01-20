@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import styles from "./Card.module.scss";
 import { useParams } from "react-router-dom";
-import Spinner from "../ui/Spinner";
-import { uploadCard } from "../api/apiMyCards";
 import toast from "react-hot-toast";
-import CardError from "../ui/CardError";
+
+import { uploadCard } from "../../api/apiMyCards";
+import styles from "./Card.module.scss";
+import CardError from "../other_LoadErrBtns/CardError";
+import Spinner from "../other_LoadErrBtns/Spinner";
 
 function Card({ user = "", isLoading }) {
   const { id } = useParams();
@@ -13,7 +14,6 @@ function Card({ user = "", isLoading }) {
 
   // this unique card id ensures that user cant add multiple same cards to myCards, it cant be simply id because it wouldnt allow 2 users to have the same card added to My Cards
   const uniqueCardId = user.id ? id + user.id : "";
-  console.log(id, user.id);
 
   // Providing pokemon card info when the user clicks on the card
   useEffect(() => {

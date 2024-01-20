@@ -1,8 +1,6 @@
-import { NavLink } from "react-router-dom";
 import styles from "./PageNotFound.module.scss";
-import BackToMainButton from "../ui/BackToMainButton";
-import Spinner from "../ui/Spinner";
-import PageNotFoundImg from "../assets/PageNotFoundImg.png";
+import BackToMainButton from "./BackToMainButton";
+import PageNotFoundImg from "../../assets/PageNotFoundImg.png";
 
 function PageNotFound() {
   return (

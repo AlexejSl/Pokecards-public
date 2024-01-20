@@ -1,8 +1,8 @@
-import styles from "../ui/AppLayout.module.scss";
 import { Skeleton } from "@mui/material";
-import { useGetMyCards } from "../api/ApiHooks";
-import MyCardsCardItem from "../ui/MyCardsCardItem";
 import toast from "react-hot-toast";
+import { useGetMyCards } from "../../api/ApiHooks";
+import MyCardsCardItem from "./MyCardsCardItem";
+import styles from "./MyCards.module.scss";
 
 function MyCards({ user }) {
   const { isLoading, error, usersCards } = useGetMyCards(user.id);

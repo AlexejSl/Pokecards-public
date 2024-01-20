@@ -1,10 +1,10 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import styles from "../pages/LogInAndSignUp.module.scss";
-import BackToMainButton from "../ui/BackToMainButton";
-import { useLogin, useSignup, useUser } from "../api/ApiHooks";
-import { useEffect, useState } from "react";
+import styles from "./LogInAndSignUp.module.scss";
+import { useLogin, useSignup, useUser } from "../../api/ApiHooks";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import BackToMainButton from "../Other_LoadErrBtns/BackToMainButton";
 
 //lot of classnames in this file are identical with log in classnames, using the same scss file
 function Signup() {

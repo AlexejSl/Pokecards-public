@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Spinner from "../ui/Spinner";
+import Spinner from "../components/other_LoadErrBtns/Spinner";
 import { useUser } from "./ApiHooks";
 import { useNavigate } from "react-router-dom";
 

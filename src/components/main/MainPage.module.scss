@@ -1,0 +1,50 @@
+@import "../../variables.scss";
+
+.grid {
+  padding: 2rem;
+  max-width: 100%;
+  height: auto;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(38rem, 1fr));
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1rem;
+    grid-gap: 1rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(36rem, 1fr));
+    flex-direction: column;
+  }
+}
+
+.container {
+  background-color: var(--color-grey-dark-1);
+  box-shadow: 4px 5px 5px rgba(#000, 0.3);
+  grid-row: 1;
+  grid-column: 2/ -2;
+  border-radius: 20px;
+  height: 82vh;
+  overflow: scroll;
+  // touch-action: pan-y;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    height: fit-content;
+    overflow: hidden;
+    margin-top: 1vh;
+  }
+}
+
+.skeleton {
+  width: 100%;
+  height: auto;
+  background-color: var(--color-grey-light-2);
+  border-radius: 10px;
+  justify-self: center;
+}

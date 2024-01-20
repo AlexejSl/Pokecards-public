@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import styles from "../pages/PageNotFound.module.scss";
+import styles from "./BackToMainButton.module.scss";
 
 function BackToMainButton() {
   return (

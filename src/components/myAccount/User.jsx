@@ -1,8 +1,8 @@
 import { useState } from "react";
-import ChangePass from "../ui/ChangePass";
+import { useUpdateAvatar } from "../../api/ApiHooks";
+import testpfp from "../../assets/testpfp.jpg";
+import ChangePass from "./ChangePass";
 import styles from "./User.module.scss";
-import { useUpdateAvatar } from "../api/ApiHooks";
-import testpfp from "../assets/testpfp.jpg";
 
 function User({ user }) {
   const [avatar, setAvatar] = useState(null);

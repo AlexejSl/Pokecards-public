@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import styles from "./CardItem.module.scss";
-import { useDeleteCard } from "../api/ApiHooks";
-
 import { RiDeleteBinLine } from "react-icons/ri";
 import { IoDiamondOutline } from "react-icons/io5";
 import { AiOutlineFieldNumber } from "react-icons/ai";
 import { CgStack } from "react-icons/cg";
-import { IoPricetag } from "react-icons/io5";
 
+import { useDeleteCard } from "../../api/ApiHooks";
+import styles from "../main/CardItem.module.scss";
+
+//the individual cards are almost the same as on main page so i decided not to duplicate the CSS but use CSS from the main page
 function MyCardsCardItem({
   name,
   id,

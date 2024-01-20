@@ -1,15 +1,15 @@
-import CardItem from "../ui/CardItem";
-import Spinner from "../ui/Spinner";
-import styles from "../ui/AppLayout.module.scss";
 import { useEffect, useState } from "react";
-import { useSearch } from "../components/Context/SearchContext";
-import SearchError from "../ui/SearchError";
 import { Skeleton } from "@mui/material";
 import toast from "react-hot-toast";
 
+import { useSearch } from "../../../store/SearchContext";
+import SearchError from "../other_LoadErrBtns/SearchError";
+import CardItem from "./CardItem";
+import styles from "./MainPage.module.scss";
+
 function MainPage() {
   const [initialCards, setInitialCards] = useState(null);
-  const { searchResults, isLoading, updatePage } = useSearch();
+  const { searchResults, isLoading } = useSearch();
 
   // providing pokemon cards when the main page loads for the first time
   useEffect(() => {

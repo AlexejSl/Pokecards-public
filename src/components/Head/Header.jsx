@@ -1,10 +1,11 @@
-import styles from "./Header.module.scss";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+
+import ProvideUserInfo from "../../api/ProvideUserInfo";
 import SearchBar from "./SearchBar";
 import Menu from "./Menu";
-import { NavLink } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
-import { useEffect, useState } from "react";
-import ProvideUserInfo from "../../api/ProvideUserInfo";
+import styles from "./Header.module.scss";
 
 function Header() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

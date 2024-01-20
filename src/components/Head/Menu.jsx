@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
-import styles from "./Menu.module.scss";
-import { useLogout, useUser } from "../../api/ApiHooks";
+import { useLogout } from "../../api/ApiHooks";
 import { PiCardsBold } from "react-icons/pi";
 import { MdManageAccounts } from "react-icons/md";
 import { TbLogout } from "react-icons/tb";
+import styles from "./Menu.module.scss";
 
 function Menu({ windowWidth, isAuthenticated }) {
   const { logout } = useLogout();
